@@ -1,0 +1,65 @@
+<html>  
+<head>  
+<style>
+	td { 
+		padding: 10px;
+	}
+	th { 
+		padding: 10px;
+	}
+	table, th, td{
+		border: 1px solid black;
+		font-size:20px;
+	}
+</style>
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.pack.js"></script>  
+<script type="text/javascript">   
+    /* 讀取xml 開始 ------------------------------------------------------------------------------ */  
+    $.ajax({  
+    url:'user.xml',  
+    type: 'Post',  
+    dataType: 'xml',//資料型態可以不設定，且此型態不可是text或html  
+    timeout: 30000,  
+    error: function(xml){  
+        //alert('讀取xml錯誤'+xml); //當xml讀取失敗  
+    },  
+    success: function(xml){  
+        $(xml).find("word").each(function(){
+			var name=$(xml).find("name");//找到name
+            var total=$(xml).find("text").length;//name的筆數  
+			var interval=$(xml).find("word > interval");//interval
+            var text=$(xml).find("word > text");// text
+			var timberScore=$(xml).find("word > timberScore");// timberScore
+			
+			
+            var numoftables = $(xml).find("text").length;  
+			$('#myTable').append('<table>')
+			$('#myTable').append('<tr><th>word</th><th>Interval</th><th>Pronunciation</th><th>Intonation</th><th>Total score</th></tr>')
+            for(j=1;j<numoftables-1;j++)  
+            {  
+                    var itemsrc=text.eq(j).text(); //文本
+					var itemstatus=interval.eq(j).text(); //區間
+					var itemscore1=timberScore.eq(j).text().split(" ")[0];//分數
+					var itemscore2=timberScore.eq(j).text().split(" ")[1];//分數
+					var startT=interval.eq(j).text().split(" ",2)[0]; //起始
+					var EndT=interval.eq(j).text().split(" ",2)[1]; //起始
+					var p=interval.eq(j).text().split(" ",2)[1]; //
+					var duration=parseFloat(p)-parseFloat(startT);
+					var totalScore=0.7*itemscore1+0.3*itemscore2;
+					
+					if(itemsrc != null&&itemsrc != ''){
+					$('#myTable').append('<tr><td id='+j+'>'+itemsrc+'</td><td>'+startT+'-'+EndT+'</td><td>'+Math.round(itemscore1)+'</td><td>'+Math.round(itemscore2)+'</td><td>'+Math.round(totalScore)+'</td></tr>'); 
+					 	
+					}
+			}
+			$('#myTable').append('</table>')
+			/* 讀取xml結束 ------------------------------------------------------------------------------ */          
+			});  
+		}  
+    });  
+</script>  
+</head>  
+<body> 
+<div id="myTable"></div> 
+</body>  
+</html>  

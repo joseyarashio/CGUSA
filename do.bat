@@ -1,0 +1,1 @@
+START "runas /user:administrator" cmd /K "cd C:\AppServ\www\CGUSA-master\exe & english.bat & exit"

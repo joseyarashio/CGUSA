@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<Menus> 
+<Menu id="0" name="首页"> 
+<MenuItemTitle sid="01" mid="0" name="常用选项"> 
+<MenuItem mid="0" tid="01" url="Home.aspx">后台首页</MenuItem> 
+<MenuItem mid="0" tid="01" url="Test.aspx">测试页</MenuItem> 
+</MenuItemTitle> 
+</Menu> 
+<Menu id="0" name="试试"> 
+<MenuItemTitle sid="01" mid="0" name="常用选项"> 
+<MenuItem mid="0" tid="01" url="Home.aspx">后台首页</MenuItem> 
+<MenuItem mid="0" tid="01" url="Test.aspx">测试页</MenuItem> 
+</MenuItemTitle> 
+</Menu> 
+</Menus> 

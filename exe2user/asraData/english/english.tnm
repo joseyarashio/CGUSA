@@ -1,0 +1,26 @@
+% String/character substitution for English text normalization
+% Format: source#target#mode#comments
+%	mode = "g" for global substitution of the source string for the target string
+%		"^" for recursive removal of a character at beginning (Only "removal" and "character" are supported.)
+%		"$" for recursive removal of a character at end (Only "removal" and "character" are supported.)
+% (A line starts with % is also a comment.)
+
+"##g#		Remove "
+ '# #g#		a book 'Gone with the wind'" ===> a book Gone with the wind'
+' # #g#		'Gone with the wind' is a good book ===> 'Gone with the wind is a good book
+?##g#		Remove ?
+!##g#		Remove !
+-# #g#		Replace - with space
+_# #g#		Replace _ with space
+, # #g#		To deal with "$10,000"
+. # #g#		To deal with "A.M." & "P.M."
+    # #g#	Replace 4 spaces with one space
+   # #g#	Replace 3 spaces with one space
+  # #g#		Replace 2 spaces with one space
+ ##^#		Remove leading blank
+ ##$#		Remove trailing blank
+'##^#		Remove leading '
+'##$#		Remove trailing '
+.##^#		Remove leading .
+.##$#		Remove trailing .
+,##$#		Remove trailing ,

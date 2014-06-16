@@ -1,0 +1,1 @@
+"C:\AppServ\www\AudioAssV20\exe\assess.exe" "C:\AppServ\www\AudioAssV20\exe\chinese.sa.prm" "C:\AppServ\www\AudioAssV20\Sample.wav" "C:\AppServ\www\AudioAssV20\Sample.txt"

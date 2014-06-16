@@ -1,0 +1,4 @@
+maxVolTh=140
+minVolTh=50
+satAmpRatio=0.95
+satSampleCountRatioTh=0.005

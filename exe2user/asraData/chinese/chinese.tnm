@@ -1,0 +1,42 @@
+% Substitute table for English normalization
+% Format: sourceString#targetString#mode#Comments
+%	mode=g (global substitution), ^ (recursive substitution at beginning), $ (recursive substitution at end)
+% (A line starts with % is also a comment.)
+
+
+% 標點符號刪除
+，##g#
+。##g#
+：##g#
+；##g#
+！##g#
+？##g#
+︷##g#
+｛##g#
+｝##g#
+「##g#
+」##g#
+『##g#
+』##g#
+｜##g#
+＋##g#
+＿##g#
+＊##g#
+【##g#
+〕##g#
+︺##g#
+、##g#
+
+% 數字轉換
+0#零#g#
+1#一#g#
+2#二#g#
+3#三#g#
+4#四#g#
+5#五#g#
+6#六#g#
+7#七#g#
+8#八#g#
+9#九#g#
+
+ # #g#		刪除所有半形空格

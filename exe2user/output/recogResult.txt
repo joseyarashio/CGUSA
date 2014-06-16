@@ -1,0 +1,8 @@
+Text index=0
+Text=What movies have you seen recently 
+Score=82.859161
+CGU=
+MPA=
+HanYu=
+Tone=
+LogProb=-23023.796875

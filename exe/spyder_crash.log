@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "C:\WinPython-32bit-3.3.2.3\python-3.3.2\lib\site-packages\spyderlib\spyder.py", line 2150, in main
+    mainwindow = run_spyder(app, options, args)
+  File "C:\WinPython-32bit-3.3.2.3\python-3.3.2\lib\site-packages\spyderlib\spyder.py", line 2047, in run_spyder
+    main.setup()
+  File "C:\WinPython-32bit-3.3.2.3\python-3.3.2\lib\site-packages\spyderlib\spyder.py", line 949, in setup
+    plugin = mod.PLUGIN_CLASS(self)
+  File "C:\WinPython-32bit-3.3.2.3\python-3.3.2\lib\site-packages\spyderplugins\p_breakpoints.py", line 31, in __init__
+    BreakpointWidget.__init__(self, parent=parent)
+  File "C:\WinPython-32bit-3.3.2.3\python-3.3.2\lib\site-packages\spyderplugins\widgets\breakpointsgui.py", line 183, in __init__
+    self._load_all_breakpoints())
+  File "C:\WinPython-32bit-3.3.2.3\python-3.3.2\lib\site-packages\spyderplugins\widgets\breakpointsgui.py", line 198, in _load_all_breakpoints
+    for filename in bp_dict.keys():
+RuntimeError: dictionary changed size during iteration

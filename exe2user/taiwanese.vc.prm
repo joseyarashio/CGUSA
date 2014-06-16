@@ -1,0 +1,38 @@
+function=recog
+netType=0				% 0:tree net, 1:sausage net (for SA only)
+language=taiwanese			% 語言
+macFile=asraData/taiwanese/taiwanese.macb		% macro file
+pinyinType=taiwanese			% english拼音（沒用到）
+wpaFile=asraData/taiwanese/english.wpa		% wpa: word to phonetic alphabets
+wpaFile=
+wpaAddendaFile=asraData/taiwanese/english.wpaAddenda	% wpaAddenda: word to phonetic alphabets (provided by the user)
+wpaAddendaFile=
+dicFile=asraData/taiwanese/taiwanese.dic		% dic: 應該是 pam (phonetic alphabets to model)
+pyTableFile=				% 文字轉拼音列表
+qiYinFile=asraData/taiwanese/taiwanese.qiYin
+featureConfigFile=asraData/mfcc2.cfg	% mfcc.cfg for MFCC_E_D_A, mfcc2.cfg for MFCC_E_D_A_Z
+txtFile=
+sylFile=
+netFile=
+outputDir=output
+% ====== CM related
+phoneRank2scoreParamFile=asraData/phoneRank2scoreParam.txt
+scoreDiscountParamFile=asraData/taiwanese/taiwanese.sdp
+%cmParamFile=asraData/english.cmp		% If this is not specified, default scoring parameters are used.
+%useAllModelAsCompetingModel=1
+usePaddedHardSp=0			% 在相鄰的 syl 加入不可省略的 sp（適用於人工標音），但不可和樓下選項同時為 1（作法：直接在 m_sylVs 插入 sp） 
+usePaddedSoftSil=0			% 在相鄰的 syl 加入可省略的 sil（適用於評分），但不可和樓上選項同時為 1（作法：直接在 textClass::sylVs2treeNetVs 插入 sil，但只能用在單一的 linear net）
+% ====== Pitch tracking & volume checking
+ptParamFile=asraData/pitchTracking.prm
+volCheckPrmFile=asraData/volCheck.prm
+% ======= 以下是常變化的項目
+maxCandidateNum=1200
+probTh=300				% 機率門檻值：若某個路徑機率和第一名相差超過此門檻值，則刪除此路徑
+comparisonMode=1			% 1:整句比對, 2:部份比對, 3:關鍵詞辨識
+getUvScore=1                    
+getPitch=0
+useEpd=0
+useWaveReject=0				% Reject the wave if it doesn't pass waveVolumeCheck()
+tnmFile=asraData/taiwanese/taiwanese.tnm		% File for text normalization mapping
+useDescCandidateNum=0			% Use a decreasing candidate number
+useSpecSubtraction=0			% Use spectrum subtraction for noise reduction

@@ -1,0 +1,43 @@
+function=assess
+netType=1						% 0:tree net, 1:sausage net (for SA only)
+language=english					% 語言
+macFile=asraData/english/english.macb			% macro file
+modelCountFile=asraData/english/english.modelCount	% Count of biphone (to be used as the prior for computing posterior score)
+pinyinType=english					% english拼音（沒用到）
+wpaFile=asraData/english/english.wpab			% wpa: word to phonetic alphabets
+wpaAddendaFile=asraData/english/english.wpaAddenda		% wpaAddenda: word to phonetic alphabets (provided by the user)
+wpaAddendaFile=
+dicFile=asraData/english/english_sorted.dic		% dic: 應該是 pam (phonetic alphabets to model)
+pyTableFile=						% 文字轉拼音列表
+qiYinFile=asraData/english/english.qiYin
+featureConfigFile=asraData/mfcc2.cfg			% mfcc.cfg for MFCC_E_D_A, mfcc2.cfg for MFCC_E_D_A_Z
+txtFile=
+sylFile=
+netFile=
+outputDir=output
+% ====== CM related
+phoneRank2scoreParamFile=asraData/phoneRank2scoreParam.txt
+scoreDiscountParamFile=asraData/english/english.sdp
+%cmParamFile=asraData/english.cmp		% If this is not specified, default scoring parameters are used.
+%useAllModelAsCompetingModel=1
+usePaddedHardSp=0			% 在相鄰的 syl 加入不可省略的 sp（適用於人工標音），但不可和樓下選項同時為 1（作法：直接在 m_sylVs 插入 sp. Not used for sausage net.） 
+usePaddedSoftSil=1			% 在相鄰的 syl 加入可省略的 sil（適用於評分），但不可和樓上選項同時為 1（作法：直接在 textClass::sylVs2treeNetVs 插入 sil，但只能用在單一的 linear net）
+% ====== Pitch tracking & volume checking
+ptParamFile=asraData/pitchTracking.prm
+volCheckPrmFile=asraData/volCheck.prm
+% ======= 以下是常變化的項目
+maxCandidateNum=12000
+probTh=3000				% 機率門檻值：若某個路徑機率和第一名相差超過此門檻值，則刪除此路徑
+comparisonMode=1			% 1:整句比對, 2:部份比對, 3:關鍵詞辨識
+getUvScore=1                    
+getPitch=1
+useEpd=1
+useWaveReject=0				% Reject the wave if it doesn't pass waveVolumeCheck()
+tnmFile=asraData/english/english.tnm		% File for text normalization mapping
+useDescCandidateNum=0			% Use a decreasing candidate number
+useSpecSubtraction=0			% Use spectrum subtraction for noise reduction
+addLink4stopAnywhere=0		% Add a link for each node in the net to the sil right before the last !NULL
+addLink4startAnywhere=0			% Add a link from the sil right after the first !NULL to each node in the net
+addLink4forwardJump=0			% Add a link for every two nodes for forward jumps
+addLink4skippableTrailingSil=0		% Add links for skippable trailing silence
+addLink4skippableLeadingSil=0		% Add links for skippable leading silence

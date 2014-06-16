@@ -1,0 +1,524 @@
+﻿<!doctype html>
+<html>
+<head>
+	<META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
+    <title>Let's SHADOW</title>
+		
+    <link rel="stylesheet" href="http://glyphicons.getbootstrap.com/css/bootstrap-glyphicons.css" />
+    <link rel="stylesheet" href="http://getbootstrap.com/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="http://simonwhitaker.github.com/github-fork-ribbon-css/gh-fork-ribbon.css" />
+    <link rel="stylesheet" href="wavesurfer/style.css" />
+	<!---jquery mobile--->
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.css" />
+	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
+	<!---jquery mobile--->
+    <script src="wavesurfer/observer.js"></script>
+    <script src="wavesurfer/wavesurfer.js"></script>
+    <script src="wavesurfer/webaudio.js"></script>
+    <script src="wavesurfer/drawer.js"></script>
+    <script src="wavesurfer/drawer.canvas.js"></script>
+    <script src="wavesurfer/drawer.svg.js"></script>
+    <script src="wavesurfer/main.js"></script>
+	
+	<script src="jRecorder/jquery.min.js"> </script>
+	<script src="jRecorder/jRecorder.js"> </script>
+    
+	<style>
+        body{
+            font: 20pt Times New Roman, sans-serif; 
+			<!---font-weight:bold;--->
+            font-family :"Times New Roman";
+			height: 100%;
+			bottom: 0px;
+            margin-top: 12pt;
+			}
+		textarea{
+			max-height:200pt;
+			}
+        select{ 
+            font: 14pt Arial, sans-serif; 
+			}
+        canvas{ 
+            display: inline-block; 
+            box-shadow: 0px 0px 10px blue;
+			}
+		.my-table {
+			table-layout:fixed;
+			width: 100%;
+			}
+        td { 
+			padding: 10px;
+			}
+		th { 
+			padding: 10px;
+			}
+        #record.recording { background: red; 
+			}
+		#list  p {
+    		font: arial;
+    		font-size: 22px;
+			}
+		a:link {color:#0000FF; text-decoration:none;} 
+		a:visited {color:#0000FF; text-decoration:none;} 
+		a:hover {color:#FF0000; text-decoration:none;} 
+		.blueLyric {font-size:20px;font-weight:bold;color:red;font-family:Courier;}
+		.normalLyric {font-size:20px;font-weight:bold;color:black;font-family:Courier;}
+		.normalLrcClass{color:black;}
+		.highlightLrcClass{color:red;}
+		#record{padding-left:60px;overflow:auto;height:400;width:200; }
+	</style>
+	
+    
+</head>
+<body>	
+<script>
+	$.jRecorder(
+		{ 
+			host : 'http://localhost/CGUSA-master/acceptfile.php?filename=userRecord' ,  //replace with your server path please_必須跟隨主機的位址做更改
+			
+			callback_started_recording:     function(){callback_started(); },
+			callback_stopped_recording:     function(){callback_stopped(); },
+			callback_activityLevel:          function(level){callback_activityLevel(level); },
+			callback_activityTime:     function(time){callback_activityTime(time); },
+			callback_finished_sending:     function(time){ callback_finished_sending() },
+			swf_path : 'jRecorder/jRecorder.swf',
+		}
+	);
+	
+   </script>
+   <div data-role="page" id="demo-page" data-theme="c" data-url="demo-page" data-fullscreen="true">
+   <div data-role="panel" id="left-panel" data-theme="b" data-display="push">
+		<ul data-role="listview" data-theme="d">
+			<li data-role="list-divider">Menu</li>
+			<li ><a href="uploadindex.php" target="_self"><i class="glyphicon glyphicon-upload"></i> Upload Files</a></li>
+			<li ><a href="" >Examples</a></li>
+            <li ><a href="exe/output/index.html" target="_blank">Lyric File Download</a></li>
+			<li ><a href="exe/output/xmlparse.html" target="_blank">Sample Parse</a></li>
+			<li ><a href="exe2user/output/xmlparse.html" target="_blank">UserRecord Parse</a></li>
+			<li ><a href="" ><i class="glyphicon glyphicon-envelope"></i> Feedback</a></li>
+             <li data-icon="delete"><a href="#" data-rel="close">Close</a></li>
+        </ul>
+    </div><!-- /left panel -->
+    <div data-role="panel" id="right-panel" data-display="overlay" data-position="right" data-theme="b" >
+	
+        <p>Setting</p>
+		<input type="checkbox" name="art" id="SenAlign" data-mini="true" data-theme="c" onclick="" />
+        <label for="SenAlign">Sentance Alignment</label>
+		<input type="checkbox" name="art" id="chkBox1" data-mini="true" data-theme="c" onclick="showPauseCheck();" />
+        <label for="chkBox1">Show Pause</label>
+		<input type="checkbox" name="art" id="chkBox2" data-mini="true" data-theme="c" onclick="javascript:autoScroll=!autoScroll;" />
+        <label for="chkBox2">Auto Scroll</label>
+        <a href="#" data-rel="close" data-role="button" data-mini="true" data-inline="true" data-icon="delete" data-iconpos="right">Close</a>
+    </div><!-- /right panel -->
+	
+	<div data-role="header" data-theme="b" data-position="inline">
+        <h1><a href="">Let's SHADOW</a></h1>
+        <a href="#left-panel"" data-icon="home" data-role="button" data-theme="b" data-inline="true"  class="ui-icon-nodisc" style="color:white;">Home</a>
+        <a href="#right-panel"" data-icon="info" data-role="button" data-iconpos="right" data-theme="b" data-inline="true"  class="ui-icon-nodisc" style="color:white;">Setting</a>
+    </div><!-- /header -->
+	
+	<div data-role="popup" id="popupBasic">
+		<iframe id="assResultFrame" src="OutputFile/xmlparse.html" width="800" height="300" marginwidth="0" marginheight="0" frameborder="no" scrolling="yes" style="border-width:2px; border-color:#333; background:#FFF; border-style:solid;">
+		</iframe>
+	</div><!-- 評分結果popup -->
+	
+	<div data-role="content" style="background-image:url(img/background.jpg) ; background-size: 100% 100%;background-repeat:no-repeat;">
+	<center>
+	
+    <img    id="recordImg" src="img/mic_key123.png"    onclick="toggleRecording(this);">
+	
+		<div id="levelbase" style="width:200px;height:20px;background-color:#ffff00">
+			<div id="levelbar" style="height:19px; width:2px;background-color:red"></div>
+		</div>
+	
+	<!--
+	<div>Time: <span id="time">0 sec</span></div>
+	<div>Level: <span id="level"></span></div>  
+	<div>Status: <span id="status"></status></div> 
+	-->
+	<div ><span>score:</span><h2><span id=testEle ></span><span id=testEle2 ></span></h2></div>
+    <!-- 分數顯示欄位 --->
+	</center>
+	<!--          audio control panel          -->
+	<div class="container">
+            <div class="controls" data-role="controlgroup" data-type="horizontal">
+				<button class="btn btn-primary" id="btPlaytime"><i class="glyphicon glyphicon-time"></i><span id=audiotime >0:00</span></button>
+                <button class="btn btn-primary" data-action="back">
+                    <i class="glyphicon glyphicon-step-backward"></i>
+                    Backward
+                </button>
+                <button class="btn btn-primary" data-action="play" click="dotimetext()">
+                    <i class="glyphicon glyphicon-play"></i>
+                    Play
+                    /
+                    <i class="glyphicon glyphicon-pause"></i>
+                    Pause
+                </button>
+                <button class="btn btn-primary" data-action="forth">
+                    <i class="glyphicon glyphicon-step-forward"></i>
+                    Forward
+                </button>
+				<button class="btn btn-primary" data-action="zoomout">
+                    <i class="glyphicon glyphicon-minus-sign"></i>
+                    Zoom out
+				</button>	
+				<button class="btn btn-primary" data-action="zoomin">
+                    <i class="glyphicon glyphicon-plus-sign"></i>
+                    Zoom in
+                </button>   
+                <button class="btn btn-danger"  id="result" data-action="">
+                    <i class="glyphicon glyphicon-book"></i>
+                    Text sync
+                </button>
+            </div>
+			<!---  文字顯示框 --->
+			<center><div align="left" class="textarea" id="text1" style="overflow:auto;background-color:#EBFFFF ;font: 24pt Times New Roman;font-weight:bold;max-height:200pt;position: relative; "><h1><span></span></h1></div><br></center>
+			
+			<div id="waveform" style="height: 200px">
+                <div class="progress" id="progress-bar">
+                    <div class="progress-bar progress-bar-info"></div>
+                </div>
+                <!-- Here be the waveform -->
+            </div>
+			
+        </div>
+		<br><br><br>
+	
+	</div><!-- /content -->
+	</div><!-- /demo page -->
+</body>
+</html>
+<script type="text/javascript">
+	$.ajaxSetup({ cache: false });
+	//變數宣告
+	var record=false;//是否錄音
+	var myVar=setInterval(function() {GetAudioTime()},50);
+	var timer=setInterval(function() {getScore()},1000);
+	//var auto_refresh = setInterval(function(){$('#popupBasic').fadeOut('slow').load('exe2user/output/xmlparse.html').fadeIn("slow");}, 1000);
+	var sentence=[];
+	var T=0;//波放棄時間
+	var SampleArray=new Array();
+	var RecordArray=new Array();
+	var Texttime=new Array(); var Textword=new Array();var Textsentance=new Array();
+	var sentenceStart=[]; var sentenceEnd=[];
+	var getTotal=0;
+	var counter=0;
+	var dotimes=0;
+	var sPause=false;var autoScroll=false;var sentanceAlign=false;
+	//網頁載入初始化動作
+	var oldOnload = window.onload || function () {};
+	window.onload = function ()
+	{
+		oldOnload();
+		dotimetext();
+	}
+	///////////////////////////////////////////////////////音文同步部分
+	function reResultFrame(){//刷新iFrame 來顯示最新的評分結果
+		iframe = document.getElementById('assResultFrame');
+		iframe.src = iframe.src;
+		//iframe.reload(true); // <-- even tried that
+		//alert("show msg");
+	}
+	function GetAudioTime()
+	{//用來抓取wavesurfer的play time
+		var i=1;
+		T=wavesurfer.backend.getCurrentTime();
+		var time2= 'Time:'+Math.floor(wavesurfer.backend.getCurrentTime());//播放時間
+		document.getElementById("audiotime").innerHTML =time2;
+		//document.getElementById("testEle").innerHTML = T;
+		CheckTextAndTime(T);
+		//document.getElementById('#assResultFrame').contentWindow.location.reload(true);
+	}
+	function CheckTextAndTime(T)
+	{//此函式用來確認span當中的觸發時間與現在sample.wav撥放時間的核對並呈現音文同步
+		
+		var i=1;
+		for(i;i<getTotal+2;i++)
+		{
+			if(Texttime[i]>T)
+				break;
+		}
+		if(i>1){
+			document.getElementById(i-1).className ='highlightLrcClass';
+			//document.getElementById('testEle2').innerHTML =$(document.getElementById(i-1)).position().top;
+			scrollElement(Textsentance[i],Textsentance[i-1],i-1);//呼叫自動卷軸
+		}
+		for(var j=1;j<i-1;j++){
+			document.getElementById(j).className ='normalLrcClass';
+		}
+		for(var j=i;j<getTotal;j++)
+			document.getElementById(j).className ='normalLrcClass';
+	
+	}
+	
+	function RandomAccess(T)  //RandomAccess隨機觸發span按下    
+	{	
+		//document.getElementById("testEle").innerHTML =wavesurfer.backend.getPlayedPercents();
+		wavesurfer.backend.play(T);
+		//wavesurfer.backend.updateProgress(wavesurfer.backend.getPlayedPercents());
+		var i;
+		for(i=1;i<=getTotal.value;i++)
+			{
+				if(Texttime[i]>T)	
+				break;
+			}
+		document.getElementById(i-1).className ='highlightLrcClass';
+	}
+	function showPauseCheck(){//顯示pause的記號
+		for(var tmp=1;tmp<getTotal;tmp++){
+		var el = document.getElementById(tmp);
+			if(el.getAttribute('datatext')=='pause'){
+				var bt=document.getElementsByName('showpause');
+				if ($('#chkBox1').is(":checked")){
+						el.innerHTML =' <ruby> || <rt></rt></ruby>';
+						changeState(sPause);
+						sPause=true;
+					}
+				else{
+						el.innerHTML ='<ruby><rt></rt></ruby>';
+						changeState(sPause);
+						sPause=false;
+					}
+			}
+		}
+	}
+	function scrollElement(ele1,ele2,i){
+		//自動卷軸
+		if(autoScroll==true && ele1!=ele2){
+			$('#text1').animate({scrollTop: $('#text1').scrollTop() + $(document.getElementById(i)).position().top}, 500);
+			//$('#text1').scrollTop($('#text1').scrollTop() + $(document.getElementById(i)).position().top);
+			//$(document).ready(function() {$('#testEle2').load('exe2user/output/xmlparse.html');});
+			}
+	}
+	function changeState(element){
+		if(element=false)
+			element=true;
+		else
+			element=false;
+	}
+///////////////////////////////////////////////////////////////////////////////////////////////////
+	
+	$(document).keypress(function(e) {//當按下r開始錄音
+    if(e.which == 82||113) {
+       $('#recordImg').click();
+		}
+	});
+	$('#recordImg').click(function(){//錄音OR NOT
+		if(record)
+		{
+			document.getElementById("recordImg").src="img/mic_key123.png";
+         	$.jRecorder.stop();
+			$.jRecorder.sendData();
+			record=false;
+		}
+		else
+		{
+			document.getElementById("recordImg").src="img/mic_key123r.png";
+			$.jRecorder.record(100);
+			record=true;
+		}
+	})
+	$("#text1").mouseup(
+
+		function() {
+			var t = getSelText().toString();
+			$("#selText").text(t);
+			//sendText2Score(t);
+			//document.getElementById('div2').innerHTML="123";
+			//wavesurfer.backend.play("0");
+		});
+	
+	$('#result').click(function(){//result觸發
+        //wavesurfer.mark2(1);//畫線區隔每個單詞
+        dotimetext();
+		getScore();
+    })
+    $('#assResult').click(function(){//result觸發
+		$( "#popupBasic" ).popup( "open" )
+    })
+	$( document ).on( "pageinit", "#demo-page", function() {//用來做panel特效
+		$( document ).on( "swipeleft swiperight", "#demo-page", function( e ) {
+        // We check if there is no open panel on the page because otherwise
+        // a swipe to close the left panel would also open the right panel (and v.v.).
+        // We do this by checking the data that the framework stores on the page element (panel: open).
+        if ( $.mobile.activePage.jqmData( "panel" ) !== "open" ) {
+            if ( e.type === "swipeleft"  ) {
+                $( "#right-panel" ).panel( "open" );
+            } else if ( e.type === "swiperight" ) {
+                $( "#left-panel" ).panel( "open" );
+            }
+			}
+		});
+	});
+	
+    function callback_activityLevel(level)
+    {
+        $('#level').html(level);
+        if(level == -1) {
+            $('#levelbar').css("width",  "2px");
+        }
+        else{
+            $('#levelbar').css("width", (level * 2)+ "px");
+        }
+    }
+	
+	function dotimetext(){//製作音文同步並將文字區隔畫出
+	$.ajax({  
+    url:'OutputFile/Sample.xml',  
+    type: 'Post',  
+    dataType: 'xml',//資料型態可以不設定，且此型態不可是text或html  
+    timeout: 30000,  
+    error: function(xml){  
+        //alert('讀取xml錯誤'+xml); //當xml讀取失敗  
+    },  
+    success: function(xml){  
+        $(xml).find("word").each(function(){
+			var name=$(xml).find("word > name");//找到name
+            var total=$(xml).find("text").length;//name的筆數  
+			var interval=$(xml).find("word > interval");//interval
+            var text2=$(xml).find("word > text");//text
+			var timberScore=$(xml).find("word > timberScore");// timberScore
+			
+			var tempSpan='<table border="2" cellpadding="80" class="my-table" ><tbody><thead><tr style="background-color: #FEFF91;"><th>Text</th></tr><thead>';var count=0;var pivotSentance=0;
+            var numoftables = $(xml).find("text").length;  
+            for(i=0;i<numoftables;i++)  
+            {  
+				var startT=interval.eq(i).text().split(" ",1); //區間
+				var Text3=text2.eq(i).text(); //文本
+				var sentance=text2.eq(i).attr("sentance");
+				var name2=name.eq(i).text(); //文本
+				wavesurfer.mark2(startT);//畫線
+				if(sentance != pivotSentance && sentance!=0){
+					if(sentance==1){
+						tempSpan+='<tr id=sentane_'+sentance+'><td>';
+						pivotSentance++;
+					}
+					else{
+						tempSpan+='</td></tr><tr id=sentane_'+sentance+'><td>';
+						pivotSentance++;
+					}
+				}
+				if(name2 != 'sil' ){//一般文字
+					
+					tempSpan+='<span id='+i+' class=normalLrcClass datatext=word data-time='+startT+' data-sentence='+sentance+' onclick="RandomAccess('+startT+')">'+Text3+' </span>';
+					Texttime[count]=startT;
+					Textword[count]=Text3;
+					Textsentance[count]=sentance;
+					count++;
+					if(Text3.indexOf('.') > -1)
+					{
+						//alert("dash found.");
+					}
+				}
+				else{//pause部分
+					if(count==0)
+					tempSpan+='<span id='+i+' class=normalLrcClass datatext=pause data-time='+startT+' data-sentence=0 onclick="RandomAccess('+startT+')">'+'<ruby><rt></rt></ruby>'+'</span>';
+					else{
+						if(sPause==true)
+							tempSpan+='<span id='+i+' class=normalLrcClass datatext=pause data-time='+startT+' data-sentence='+sentence+' onclick="RandomAccess('+startT+')">'+'||'+'</span>';
+						else
+							tempSpan+='<span id='+i+' class=normalLrcClass datatext=pause data-time='+startT+' data-sentence='+sentence+' onclick="RandomAccess('+startT+')">'+'<ruby><rt></rt></ruby>'+'</span>';
+						
+					}
+					Texttime[count]=startT;
+					Textword[count]=Text3;
+					Textsentance[count]=sentance;
+					count++;
+				}
+			}
+			tempSpan+='</tbody></table>'
+			getTotal=count;
+			document.getElementById('text1').innerHTML=tempSpan;
+    /* 讀取xml結束 ------------------------------------------------------------------------------ */          
+			});  
+		}  
+    }); 
+	}
+	function getScore(){//獲取錄音檔分析後的分數
+	$.ajax({  
+    url:'OutputFile/User.xml',  
+    type: 'Post',  
+    dataType: 'xml',//資料型態可以不設定，且此型態不可是text或html  
+    timeout: 30000,  
+    error: function(xml){  
+        //alert('讀取xml錯誤'+xml); //當xml讀取失敗  
+    },  
+    success: function(xml){  
+        $(xml).find("cm").each(function(){
+			var MainScore=$(xml).find("timberScore");// 總分
+			var name=$(xml).find("word > name");//找到name
+			var timberScore=$(xml).find("word > timberScore");// timberScore
+			var text2=$(xml).find("word > text");//text
+			var Score=Math.floor(MainScore.eq(0).text()); 
+			
+			//document.getElementById('testEle').innerHTML=Score;
+			
+			var totalScore=0;
+			var totalVocabulary=0;
+			var j=0;
+			var z=1;
+            var num = $(xml).find("word > timberScore").length;  
+            for(i=0;i<num;i++)  
+            {  
+				document.getElementById(i).style.background ='#EBFFFF';//洗白
+				var itemScore1=timberScore.eq(i).text().split(" ")[0];//分數1
+				var itemScore2=timberScore.eq(i).text().split(" ")[1];//分數1
+				var Text3=text2.eq(i).text(); //文本
+				var name2=name.eq(i).text(); //文本
+				
+				if(Textword[i]=='' && i>0 && sPause==true){//pause部分
+					//document.getElementById(i).innerHTML ='<ruby> |<rt>x</rt></ruby>';
+				}
+
+				if(itemScore1!='-1' ){
+					totalScore+=parseInt((parseInt(itemScore1)*0.7+parseInt(itemScore2)*0.3));//分數加總
+					totalVocabulary++;
+					/*	
+					if(parseInt((parseInt(itemScore1)*0.7+parseInt(itemScore2)*0.3))<60){
+						for(x=j;x<num;x++){
+							if(Textword[j]==Text3){ 
+								document.getElementById(j).style.background ='#FF8F19';
+								break;
+							}j++;
+						}
+					}*/
+				}	
+			}
+			totalScore=totalScore/totalVocabulary;
+			if((totalScore != ' ')&&(totalScore != null)){
+				document.getElementById('testEle').innerHTML='<a href="#popupBasic" data-rel="popup" data-position-to="window" onclick="reResultFrame();">'+Math.floor(totalScore)+'</a>';
+			}
+			else{
+				document.getElementById('testEle').innerHTML='...';
+			}
+			/* 讀取xml結束 ------------------------------------------------------------------------------ */          
+			});  
+		} 
+    }); 
+	
+	}
+	function sendText2Score(temp){
+		$(document).ready(function() {
+        var sentance = temp.toString();
+        $.ajax({
+            type: 'post',
+            url: 'acceptfile.php',
+            data: {sentance:sentance}
+        });
+	});
+	}
+	function getSelText() {//取得選取的文字內容
+		var txt = '';
+		if (window.getSelection) {
+			txt = window.getSelection();
+		} else if (document.getSelection) {
+			txt = document.getSelection();
+		} else if (document.selection) {
+			txt = document.selection.createRange().text;
+		} 
+		return txt;
+	}
+		
+</script>
+		

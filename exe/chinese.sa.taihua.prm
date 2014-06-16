@@ -1,0 +1,32 @@
+language=chinese			% 語言
+macFile=dataAsra/chinese/taihua4.macb		% macro file
+pinyinType=cgu				% 長庚拼音s
+wpaFile=dataAsra/chinese/chineseBig5.wpa		% wpa: word to phonetic alphabets
+dicFile=dataAsra/chinese/taihua.dic			% dic: 應該是 pam (phonetic alphabets to model)
+pyTableFile=dataAsra/chinese/pinyinTable.txt	% 文字轉拼音列表
+qiYinFile=dataAsra/chinese/taihua.qiYin
+featureConfigFile=dataAsra/mfcc.cfg
+txtFile=
+sylFile=
+netFile=
+outputDir=output
+% ====== CM related
+phoneRank2scoreParamFile=dataAsra/phoneRank2scoreParam.txt
+scoreDiscountParamFile=dataAsra/chinese/chinese.sdp
+cmParamFile=dataAsra/chinese/taihua.cmp
+usePaddedHardSp=1			% 在相鄰的 syl 加入不可省略的 sp（適用於人工標音），但不可和樓下選項同時為 1（作法：直接在 m_sylVs 插入 sp） 
+usePaddedSoftSil=0			% 在相鄰的 syl 加入可省略的 sil（適用於評分），但不可和樓上選項同時為 1（作法：直接在 textClass::sylVs2treeNetVs 插入 sil，但只能用在單一的 linear net）
+% ====== Pitch tracking
+pitchParamFile=dataAsra/pitchParam.txt
+% ======= 以下是常變化的項目
+maxCandidateNum=1200
+probTh=300				% 機率門檻值：若某個路徑機率和第一名相差超過此門檻值，則刪除此路徑
+netType=0				% tree net
+onlyOneSentence=0			% 只能比對一句
+getUvScore=1                    
+getPitch=0
+useEpd=0
+comparisonMode=1			% 1:整句比對, 2:部份比對, 3:關鍵詞辨識
+useWaveReject=0				% Reject the wave if it doesn't pass waveVolumeCheck()
+tnmFile=dataAsra/chinese/chinese.tnm		% File for text normalization mapping
+useDescCandidateNum=1			% Use a decreasing candidate number

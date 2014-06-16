@@ -1,0 +1,6 @@
+% String/character substitution for English text normalization
+% Format: source#target#mode#comments
+%	mode = "g" for global substitution of the source string for the target string
+%		"^" for recursive removal of a character at beginning (Only "removal" and "character" are supported.)
+%		"$" for recursive removal of a character at end (Only "removal" and "character" are supported.)
+% (A line starts with % is also a comment.)

@@ -1,0 +1,28 @@
+% Parameters for pitch tracking
+
+% ====== Wave parameters
+fs=16000			% Sampling rate
+nbits=16			% Bit resolution
+% ====== General PT parameters
+pfType=0			% Pitch function type, 0 for AMDF, 1 for ACF
+frameSize=640			% Frame size
+overlap=480			% Keep frame rate to be 100, same as that of ASR
+pfLen=320			% PF (pitch function) length
+ppcNum=10			% No. of pitch period candidates, which is not used for the time being
+minPitch=30.0			% min. pitch
+maxPitch=84.0			% max. pitch
+pitchRangeMax=24		% Max range of pitch vector. For singing input
+pitchDiffMax=5			% Max pitch difference between two neighboring frame. For singing input
+maxMedianPitchDiff=20		% 和中位數的差距不能超過此值
+% ====== dp 的相關參數
+dpMethod=1			% dpMethod=1 ===> 以 indexDiff 來保持平滑度（缺點：對音高是非線性）, dpMethod=2 ===> 以 pitchDiff 來保持平滑度（優點：對音高是線性，缺點：計算量較大）
+dpPosDiffOrder=2		% dpPosDiffOrder=1 ===> abs diff, dpPosDiffOrder=2 ===> squared diff
+dpUseLocalOptim=0		% dpUseLocalOptim=0 ===> use all pf as ppc, dpUseLocalOptim=1 ===> use only local min of pf as ppc
+pfWeight=1			% Weigth for PF
+indexDiffWeight=5000		% Weight for difference in PPC index (for keeping pitch smooth)
+% ====== Post processing
+volThresholding=1		% pitch is zero for frame of low volume
+clarityThresholding=0		% pitch is zero for frame of low clarity
+clarityRatio=0.5		% Clarity ratio for clarity thresholding
+medianFilterOrder=5		% an odd number. (0 or 1 or 2: no median filter is used.)
+cutLeadingTrailingZero=0	% cut leading and trailing zeros

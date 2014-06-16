@@ -1,0 +1,279 @@
+a	 a+sil	
+ba	b+a a+sil	
+bba	b+a a+sil	
+bbe	b+e e+sil	
+bbi	b+i i+sil	
+bbo	b+o o+sil	
+bbu	b+u u+sil	
+bbya	b+ya y+a a+sil
+bbyo	b+yo y+o o+sil
+bbyu	b+yu y+u u+sil
+be	b+e e+sil	
+bi	b+i i+sil	
+bo	b+o o+sil	
+bu	b+u u+sil	
+bya	b+ya y+a a+sil
+byo	b+yo y+o o+sil
+byu	b+yu y+u u+sil
+ccha	ch+a a+sil	
+cche	ch+e e+sil	
+cchi	ch+i i+sil	
+ccho	ch+o o+sil	
+cchu	ch+u u+sil	
+ccya	ch+a a+sil	
+ccyo	ch+o o+sil	
+ccyu	ch+u u+sil	
+cha	ch+a a+sil	
+che	ch+e e+sil	
+chi	ch+i i+sil	
+cho	ch+o o+sil	
+chu	ch+u u+sil	
+cya	ch+a a+sil	
+cyo	ch+o o+sil	
+cyu	ch+u u+sil	
+da	d+a a+sil	
+dda	d+a a+sil	
+dde	d+e e+sil	
+ddhi	d+i i+sil	
+ddi	d+i i+sil	
+ddo	d+o o+sil	
+ddu	z+u u+sil	
+ddyu	d+yu y+u u+sil
+de	d+e e+sil	
+dhi	d+i i+sil	
+di	d+i i+sil	
+do	d+o o+sil	
+du	z+u u+sil	
+dwu	z+u u+sil	
+dya	z+a a+sil	
+dye	z+e e+sil	
+dyo	z+o o+sil	
+dyu	d+yu y+u u+sil
+e	 e+sil	
+fa	f+a a+sil	
+fe	f+e e+sil	
+ffa	f+a a+sil	
+ffe	f+e e+sil	
+ffi	f+i i+sil	
+ffo	f+o o+sil	
+ffu	f+u u+sil	
+fi	f+i i+sil	
+fo	f+o o+sil	
+fu	f+u u+sil	
+ga	g+a a+sil	
+ge	g+e e+sil	
+gga	g+a a+sil	
+gge	g+e e+sil	
+ggi	g+i i+sil	
+ggo	g+o o+sil	
+ggu	g+u u+sil	
+ggya	g+ya y+a a+sil	
+ggyo	g+yo y+o o+sil
+ggyu	g+yu y+u u+sil
+gi	g+i i+sil	
+go	g+o o+sil	
+gu	g+u u+sil
+gwa	g+u	w+a a+sil
+gya	g+ya y+a a+sil
+gyo	g+yo y+o o+sil
+gyu	g+yu y+u u+sil
+ha	h+a a+sil	
+he	h+e e+sil	
+hha	h+a a+sil	
+hhe	h+e e+sil	
+hhi	h+i i+sil	
+hho	h+o o+sil	
+hhu	h+u u+sil	
+hhya	h+ya y+a	
+hhyo	h+yo y+o o+sil
+hhyu	h+yu y+u u+sil
+hi	h+i i+sil	
+ho	h+o o+sil	
+hu	h+u u+sil	
+hya	h+ya y+a a+sil
+hyo	h+yo y+a a+sil
+hyu	h+yu y+u u+sil
+i	 i+sil	
+ja	j+a a+sil	
+je	j+e e+sil	
+ji	j+i i+sil	
+jja	j+a a+sil	
+jje	j+e e+sil	
+jji	j+i i+sil	
+jjo	j+o o+sil	
+jju	j+u u+sil	
+jjya	j+a a+sil	
+jjyo	j+o o+sil	
+jjyu	j+u u+sil	
+jo	j+o o+sil	
+ju	j+u u+sil	
+jya	j+a a+sil	
+jyo	j+o o+sil	
+jyu	j+u u+sil	
+ka	k+a a+sil	
+ke	k+e e+sil	
+ki	k+i i+sil	
+kka	k+a a+sil	
+kke	k+e e+sil	
+kki	k+i i+sil	
+kko	k+o o+sil	
+kku	k+u u+sil	
+kkya	k+ya y+a a+sil
+kkyo	k+yo y+o o+sil
+kkyu	k+yu y+u u+sil
+ko	k+o o+sil	
+ku	k+u u+sil	
+kwa	k+u w+a a+sil	
+kya	k+ya y+a a+sil
+kyo	k+yo y+o o+sil
+kyu	k+yu y+u u+sil
+m	ng+sil	
+ma	m+a a+sil	
+me	m+e e+sil	
+mi	m+i i+sil	
+mma	m+a a+sil	
+mme	m+e e+sil	
+mmi	m+i i+sil	
+mmo	m+o o+sil	
+mmu	m+u u+sil	
+mmya	m+ya y+a a+sil
+mmyo	m+yo y+o o+sil
+mmyu	m+yu y+u u+sil
+mo	m+o o+sil	
+mu	m+u u+sil	
+mya	m+ya y+a a+sil
+myo	m+yo y+o o+sil
+myu	m+yu y+u u+sil
+n	ng+sil
+na	n+a a+sil	
+ne	n+e e+sil	
+ng	ng+sil
+ni	n+i i+sil	
+nna	n+a a+sil	
+nne	n+e e+sil	
+nni	n+i i+sil	
+nno	n+o o+sil	
+nnu	n+u u+sil	
+nnya	n+ya y+a a+sil
+nnyo	n+yo y+o o+sil
+nnyu	n+yu y+u u+sil
+no	n+o o+sil	
+nu	n+u u+sil	
+nya	n+ya y+a a+sil
+nyo	n+yo y+o o+sil
+nyu	n+yu y+u u+sil
+o	 o+sil	
+pa	p+a a+sil	
+pe	p+e e+sil	
+pi	p+i i+sil	
+po	p+o o+sil	
+ppa	p+a a+sil	
+ppe	p+e e+sil	
+ppi	p+i i+sil	
+ppo	p+o o+sil	
+ppu	p+u u+sil	
+ppya	p+ya y+a a+sil
+ppyo	p+yo y+o o+sil
+ppyu	p+yu y+u u+sil
+pu	p+u u+sil	
+pya	p+ya y+a a+sil
+pyo	p+yo y+o o+sil
+pyu	p+yu y+u u+sil	
+ra	r+a a+sil	
+re	r+e e+sil	
+ri	r+i i+sil	
+ro	r+o o+sil	
+rra	r+a a+sil	
+rre	r+e e+sil	
+rri	r+i i+sil	
+rro	r+o o+sil	
+rru	r+u u+sil	
+rrya	r+ya y+a a+sil
+rryo	r+yo y+o o+sil
+rryu	r+yu y+u u+sil
+ru	r+u u+sil	
+rya	r+ya y+a a+sil
+ryo	r+yo y+o o+sil
+ryu	r+yu y+u u+sil
+s	s+u u+sil	
+sa	s+a a+sil	
+se	s+e e+sil	
+sha	sh+a a+sil	
+she	s+e e+sil	
+shi	sh+i i+sil	
+sho	sh+o o+sil	
+shu	sh+u u+sil	
+si	sh+i i+sil	
+sil	sil	
+so	s+o o+sil
+sp	sp	
+ssa	s+a a+sil	
+sse	s+e e+sil	
+ssha	sh+a a+sil	
+sshi	sh+i i+sil	
+ssho	sh+o o+sil	
+sshu	sh+u u+sil	
+ssi	sh+i i+sil	
+sso	s+o o+sil	
+ssu	s+u u+sil	
+ssya	sh+a a+sil	
+ssyo	sh+o o+sil	
+ssyu	sh+u u+sil	
+su	s+u u+sil	
+swi	s+u w+i i+sil	
+sya	sh+a a+sil	
+syo	sh+o o+sil	
+syu	sh+u u+sil	
+ta	t+a a+sil	
+te	t+e e+sil	
+thi	ch+i i+sil	
+ti	t+i i+sil	
+to	t+o o+sil	
+ts	ts+u u+sil	
+tsu	ts+u u+sil	
+tta	ts+u t+a a+sil
+tte	t+e e+sil	
+tti	t+i i+sil	
+tto	t+o o+sil	
+tts	ts+u u+sil	
+ttsu	ts+u u+sil	
+tu	ts+u u+sil	
+twu	ts+u w+u u+sil	
+u	 u+sil	
+va	f+a a+sil	
+ve	f+e e+sil	
+vi	f+i i+sil	
+vo	f+o o+sil	
+vu	f+u u+sil	
+wa	w+a a+sil	
+we	w+i e+sil	
+whe	w+i e+sil	
+wi	w+i i+sil	
+wo	o+sil	
+wwa	w+a a+sil	
+wwe	w+i e+sil	
+wwi	w+i i+sil	
+wwo	o+sil	
+ya	y+a a+sil	
+yo	y+o oend+sil	
+yu	y+u u+sil	
+yya	y+a a+sil	
+yyo	y+o o+sil	
+yyu	y+u u+sil	
+za	z+a a+sil	
+ze	z+e e+sil	
+zi	j+i i+sil	
+zo	z+o o+sil	
+zu	z+u u+sil	
+zya	j+a a+sil	
+zye	j+e e+sil	
+zyo	j+o o+sil	
+zyu	j+u u+sil	
+zza	z+a a+sil	
+zze	z+e e+sil	
+zzi	j+i i+sil	
+zzo	z+o o+sil	
+zzu	z+u u+sil	
+zzya	j+a a+sil	
+zzyo	j+o o+sil	
+zzyu	j+u u+sil	

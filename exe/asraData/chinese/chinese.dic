@@ -1,0 +1,446 @@
+a	a+sil
+ai	a+i i+sil
+an	a+nn nn+sil
+ang	a+ng ng+sil
+ao	a+u u+sil
+ba	b+a a+sil
+bai	b+a a+i i+sil
+ban	b+a a+nn nn+sil
+bang	b+a a+ng ng+sil
+bao	b+a a+u u+sil
+bei	b+e e+i i+sil
+ben	b+er er+nn nn+sil
+beng	b+ng ng+sil
+bi	b+i i+sil
+bian	b+i i+e e+nn nn+sil
+biang	b+i i+a a+ng ng+sil
+biao	b+i i+a a+u u+sil
+bie	b+i i+e e+sil
+bin	b+i i+nn nn+sil
+bing	b+i i+ng ng+sil
+bo	b+u u+o o+sil
+bo2	b+o o+sil
+bu	b+u u+sil
+ca	c+a a+sil
+cai	c+a a+i i+sil
+can	c+a a+nn nn+sil
+cang	c+a a+ng ng+sil
+cao	c+a a+u u+sil
+ce	c+er er+sil
+cen	c+er er+nn nn+sil
+ceng	c+ng ng+sil
+cha	ch+a a+sil
+chai	ch+a a+i i+sil
+chan	ch+a a+nn nn+sil
+chang	ch+a a+ng ng+sil
+chao	ch+a a+u u+sil
+che	ch+er er+sil
+chen	ch+er er+nn nn+sil
+cheng	ch+ng ng+sil
+chi	ch+iii iii+sil
+chong	ch+o o+ng ng+sil
+chou	ch+o o+u u+sil
+chu	ch+u u+sil
+chua	ch+u u+a a+sil
+chuai	ch+u u+a a+i i+sil
+chuan	ch+u u+a a+nn nn+sil
+chuang	ch+u u+a a+ng ng+sil
+chui	ch+u u+e e+i i+sil
+chun	ch+u u+nn nn+sil
+chuo	ch+u u+o o+sil
+ci	c+ii ii+sil
+cong	c+o o+ng ng+sil
+cou	c+o o+u u+sil
+cu	c+u u+sil
+cuan	c+u u+a a+nn nn+sil
+cuang	c+u u+a a+ng ng+sil
+cui	c+u u+e e+i i+sil
+cun	c+u u+nn nn+sil
+cuo	c+u u+o o+sil
+da	d+a a+sil
+dai	d+a a+i i+sil
+dan	d+a a+nn nn+sil
+dang	d+a a+ng ng+sil
+dao	d+a a+u u+sil
+de	d+er er+sil
+dei	d+e e+i i+sil
+deng	d+ng ng+sil
+di	d+i i+sil
+dia	d+i i+a a+sil
+dian	d+i i+e e+nn nn+sil
+diao	d+i i+a a+u u+sil
+die	d+i i+e e+sil
+ding	d+i i+ng ng+sil
+diu	d+i i+o o+u u+sil
+diu2	d+i i+u u+sil
+dong	d+o o+ng ng+sil
+dou	d+o o+u u+sil
+du	d+u u+sil
+duan	d+u u+a a+nn nn+sil
+duang	d+u u+a a+ng ng+sil
+dui	d+u u+e e+i i+sil
+dun	d+u u+nn nn+sil
+duo	d+u u+o o+sil
+e	er+sil
+eh	e+sil
+ei	e+i i+sil
+en	er+nn nn+sil
+eng	ng+sil
+er	err+sil
+fa	f+a a+sil
+fan	f+a a+nn nn+sil
+fang	f+a a+ng ng+sil
+fei	f+e e+i i+sil
+fen	f+er er+nn nn+sil
+feng	f+o o+ng ng+sil
+fiao	f+i i+a a+u u+sil
+filler	filler
+fo	f+u u+o o+sil
+fo2	f+o o+sil
+fong	f+o o+ng ng+sil
+fou	f+o o+u u+sil
+fu	f+u u+sil
+ga	g+a a+sil
+gai	g+a a+i i+sil
+gan	g+a a+nn nn+sil
+gang	g+a a+ng ng+sil
+gao	g+a a+u u+sil
+ge	g+er er+sil
+gei	g+e e+i i+sil
+gen	g+er er+nn nn+sil
+geng	g+ng ng+sil
+gong	g+o o+ng ng+sil
+gou	g+o o+u u+sil
+gu	g+u u+sil
+gua	g+u u+a a+sil
+guai	g+u u+a a+i i+sil
+guan	g+u u+a a+nn nn+sil
+guang	g+u u+a a+ng ng+sil
+gui	g+u u+e e+i i+sil
+gun	g+u u+nn nn+sil
+guo	g+u u+o o+sil
+ha	h+a a+sil
+hai	h+a a+i i+sil
+han	h+a a+nn nn+sil
+hang	h+a a+ng ng+sil
+hao	h+a a+u u+sil
+he	h+er er+sil
+hei	h+e e+i i+sil
+hen	h+er er+nn nn+sil
+heng	h+ng ng+sil
+hong	h+o o+ng ng+sil
+hou	h+o o+u u+sil
+hu	h+u u+sil
+hua	h+u u+a a+sil
+huai	h+u u+a a+i i+sil
+huan	h+u u+a a+nn nn+sil
+huang	h+u u+a a+ng ng+sil
+hui	h+u u+e e+i i+sil
+hun	h+u u+nn nn+sil
+huo	h+u u+o o+sil
+ji	j+i i+sil
+jia	j+i i+a a+sil
+jian	j+i i+e e+nn nn+sil
+jiang	j+i i+a a+ng ng+sil
+jiao	j+i i+a a+u u+sil
+jie	j+i i+e e+sil
+jin	j+i i+nn nn+sil
+jing	j+i i+ng ng+sil
+jiong	z+i i+o o+ng ng+sil
+jiu	j+i i+o o+u u+sil
+jiu2	z+i i+u u+sil
+ju	j+yu yu+sil
+juan	j+yu yu+e e+nn nn+sil
+juang	z+yu yu+a a+ng ng+sil
+jue	j+yu yu+e e+sil
+jun	j+yu yu+nn nn+sil
+jyong	j+i i+o o+ng ng+sil
+ka	k+a a+sil
+kai	k+a a+i i+sil
+kan	k+a a+nn nn+sil
+kang	k+a a+ng ng+sil
+kao	k+a a+u u+sil
+ke	k+er er+sil
+ken	k+er er+nn nn+sil
+keng	k+ng ng+sil
+kong	k+o o+ng ng+sil
+kou	k+o o+u u+sil
+ku	k+u u+sil
+kua	k+u u+a a+sil
+kuai	k+u u+a a+i i+sil
+kuan	k+u u+a a+nn nn+sil
+kuang	k+u u+a a+ng ng+sil
+kui	k+u u+e e+i i+sil
+kun	k+u u+nn nn+sil
+kuo	k+u u+o o+sil
+la	l+a a+sil
+lai	l+a a+i i+sil
+lan	l+a a+nn nn+sil
+lang	l+a a+ng ng+sil
+lao	l+a a+u u+sil
+le	l+er er+sil
+lei	l+e e+i i+sil
+len	l+er er+nn nn+sil
+leng	l+ng ng+sil
+li	l+i i+sil
+lia	l+i i+a a+sil
+lian	l+i i+e e+nn nn+sil
+liang	l+i i+a a+ng ng+sil
+liao	l+i i+a a+u u+sil
+lie	l+i i+e e+sil
+lin	l+i i+nn nn+sil
+ling	l+i i+ng ng+sil
+liu	l+i i+o o+u u+sil
+liu2	l+i i+u u+sil
+long	l+o o+ng ng+sil
+lou	l+o o+u u+sil
+lu	l+u u+sil
+luan	l+u u+a a+nn nn+sil
+luang	l+u u+a a+ng ng+sil
+lui	l+u u+e e+i i+sil
+lun	l+u u+nn nn+sil
+luo	l+u u+o o+sil
+lyu	l+yu yu+sil
+lyuan	l+yu yu+a a+nn nn+sil
+lyuang	l+yu yu+a a+ng ng+sil
+lyue	l+yu yu+e e+sil
+ma	m+a a+sil
+mai	m+a a+i i+sil
+man	m+a a+nn nn+sil
+mang	m+a a+ng ng+sil
+mao	m+a a+u u+sil
+me	m+er er+sil
+mei	m+e e+i i+sil
+men	m+er er+nn nn+sil
+meng	m+ng ng+sil
+mi	m+i i+sil
+mian	m+i i+e e+nn nn+sil
+miang	m+i i+e e+ng ng+sil
+miao	m+i i+a a+u u+sil
+mie	m+i i+e e+sil
+min	m+i i+nn nn+sil
+ming	m+i i+ng ng+sil
+miu	m+i i+o o+u u+sil
+miu2	m+i i+u u+sil
+mo	m+u u+o o+sil
+mo2	m+o o+sil
+mou	m+o o+u u+sil
+mu	m+u u+sil
+na	n+a a+sil
+nai	n+a a+i i+sil
+nan	n+a a+nn nn+sil
+nang	n+a a+ng ng+sil
+nao	n+a a+u u+sil
+ne	n+er er+sil
+nei	n+e e+i i+sil
+nen	n+er er+nn nn+sil
+neng	n+ng ng+sil
+ni	n+i i+sil
+nian	n+i i+e e+nn nn+sil
+niang	n+i i+a a+ng ng+sil
+niao	n+i i+a a+u u+sil
+nie	n+i i+e e+sil
+nin	n+i i+nn nn+sil
+ning	n+i i+ng ng+sil
+niu	n+i i+o o+u u+sil
+niu2	n+i i+u u+sil
+nong	n+o o+ng ng+sil
+nou	n+o o+u u+sil
+nu	n+u u+sil
+nuan	n+u u+a a+nn nn+sil
+nuang	n+u u+ann ann+ng ng+sil
+nuo	n+u u+o o+sil
+nyu	n+yu yu+sil
+nyue	n+yu yu+e e+sil
+o	o+sil
+ou	o+u u+sil
+pa	p+a a+sil
+pai	p+a a+i i+sil
+pan	p+a a+nn nn+sil
+pang	p+a a+ng ng+sil
+pao	p+a a+u u+sil
+pei	p+e e+i i+sil
+pen	p+er er+nn nn+sil
+peng	p+ng ng+sil
+pi	p+i i+sil
+pian	p+i i+e e+nn nn+sil
+piang	p+i i+e e+ng ng+sil
+piao	p+i i+a a+u u+sil
+pie	p+i i+e e+sil
+pin	p+i i+nn nn+sil
+ping	p+i i+ng ng+sil
+po	p+u u+o o+sil
+po2	p+o o+sil
+pou	p+o o+u u+sil
+pu	p+u u+sil
+qi	q+i i+sil
+qia	q+i i+a a+sil
+qian	q+i i+e e+nn nn+sil
+qiang	q+i i+a a+ng ng+sil
+qiao	q+i i+a a+u u+sil
+qie	q+i i+e e+sil
+qin	q+i i+nn nn+sil
+qing	q+i i+ng ng+sil
+qiong	q+i i+o o+ng ng+sil
+qiu	q+i i+o o+u u+sil
+qiu2	c+i i+u u+sil
+qu	q+yu yu+sil
+quan	q+yu yu+e e+nn nn+sil
+quang	c+yu yu+a a+ng ng+sil
+que	q+yu yu+e e+sil
+qun	q+yu yu+nn nn+sil
+ran	rh+a a+nn nn+sil
+rang	rh+a a+ng ng+sil
+rao	rh+a a+u u+sil
+re	rh+er er+sil
+ren	rh+er er+nn nn+sil
+reng	rh+ng ng+sil
+ri	rh+iii iii+sil
+rong	rh+o o+ng ng+sil
+rou	rh+o o+u u+sil
+ru	rh+u u+sil
+ruan	rh+u u+a a+nn nn+sil
+ruang	rh+u u+a a+ng ng+sil
+rui	rh+u u+e e+i i+sil
+run	rh+u u+nn nn+sil
+ruo	rh+u u+o o+sil
+sa	s+a a+sil
+sai	s+a a+i i+sil
+san	s+a a+nn nn+sil
+sang	s+a a+ng ng+sil
+sao	s+a a+u u+sil
+se	s+er er+sil
+sen	s+er er+nn nn+sil
+seng	s+ng ng+sil
+sha	sh+a a+sil
+shai	sh+a a+i i+sil
+shan	sh+a a+nn nn+sil
+shang	sh+a a+ng ng+sil
+shao	sh+a a+u u+sil
+she	sh+er er+sil
+shei	sh+e e+i i+sil
+shen	sh+er er+nn nn+sil
+sheng	sh+ng ng+sil
+shi	sh+iii iii+sil
+shou	sh+o o+u u+sil
+shu	sh+u u+sil
+shua	sh+u u+a a+sil
+shuai	sh+u u+a a+i i+sil
+shuan	sh+u u+a a+nn nn+sil
+shuang	sh+u u+a a+ng ng+sil
+shui	sh+u u+e e+i i+sil
+shun	sh+u u+nn nn+sil
+shuo	sh+u u+o o+sil
+si	s+ii ii+sil
+sil	sil
+song	s+o o+ng ng+sil
+sou	s+o o+u u+sil
+sp	sp
+su	s+u u+sil
+suan	s+u u+a a+nn nn+sil
+suang	s+u u+a a+ng ng+sil
+sui	s+u u+e e+i i+sil
+sun	s+u u+nn nn+sil
+suo	s+u u+o o+sil
+ta	t+a a+sil
+tai	t+a a+i i+sil
+tan	t+a a+nn nn+sil
+tang	t+a a+ng ng+sil
+tao	t+a a+u u+sil
+te	t+er er+sil
+ten	t+er er+nn nn+sil
+teng	t+ng ng+sil
+ti	t+i i+sil
+tian	t+i i+e e+nn nn+sil
+tiang	t+i i+e e+ng ng+sil
+tiao	t+i i+a a+u u+sil
+tie	t+i i+e e+sil
+ting	t+i i+ng ng+sil
+tong	t+o o+ng ng+sil
+tou	t+o o+u u+sil
+tu	t+u u+sil
+tuan	t+u u+a a+nn nn+sil
+tuang	t+u u+a a+ng ng+sil
+tui	t+u u+e e+i i+sil
+tun	t+u u+nn nn+sil
+tuo	t+u u+o o+sil
+wa	u+a a+sil
+wai	u+a a+i i+sil
+wan	u+a a+nn nn+sil
+wang	u+a a+ng ng+sil
+wei	u+e e+i i+sil
+wen	u+nn nn+sil
+weng	u+o o+ng ng+sil
+wo	u+o o+sil
+wu	u+sil
+xi	x+i i+sil
+xia	x+i i+a a+sil
+xian	x+i i+e e+nn nn+sil
+xiang	x+i i+a a+ng ng+sil
+xiao	x+i i+a a+u u+sil
+xie	x+i i+e e+sil
+xin	x+i i+nn nn+sil
+xing	x+i i+ng ng+sil
+xiong	x+i i+o o+ng ng+sil
+xiu	x+i i+o o+u u+sil
+xiu2	s+i i+u u+sil
+xu	x+yu yu+sil
+xuan	x+yu yu+e e+nn nn+sil
+xuang	s+yu yu+a a+ng ng+sil
+xue	x+yu yu+e e+sil
+xun	x+yu yu+nn nn+sil
+ya	i+a a+sil
+yai	i+a a+i i+sil
+yan	i+e e+nn nn+sil
+yang	i+a a+ng ng+sil
+yao	i+a a+u u+sil
+ye	i+e e+sil
+yi	i+sil
+yin	i+nn nn+sil
+ying	i+ng ng+sil
+yo	i+o o+sil
+yong	i+o o+ng ng+sil
+you	i+o o+u u+sil
+yu	yu+sil
+yuan	yu+e e+nn nn+sil
+yuang	yu+e e+ng ng+sil
+yue	yu+e e+sil
+yun	yu+nn nn+sil
+yung	yu+o o+ng ng+sil
+za	z+a a+sil
+zai	z+a a+i i+sil
+zan	z+a a+nn nn+sil
+zang	z+a a+ng ng+sil
+zao	z+a a+u u+sil
+ze	z+er er+sil
+zei	z+e e+i i+sil
+zen	z+er er+nn nn+sil
+zeng	z+ng ng+sil
+zha	zh+a a+sil
+zhai	zh+a a+i i+sil
+zhan	zh+a a+nn nn+sil
+zhang	zh+a a+ng ng+sil
+zhao	zh+a a+u u+sil
+zhe	zh+er er+sil
+zhen	zh+er er+nn nn+sil
+zheng	zh+ng ng+sil
+zhi	zh+iii iii+sil
+zhong	zh+o o+ng ng+sil
+zhou	zh+o o+u u+sil
+zhu	zh+u u+sil
+zhua	zh+u u+a a+sil
+zhuai	zh+u u+a a+i i+sil
+zhuan	zh+u u+a a+nn nn+sil
+zhuang	zh+u u+a a+ng ng+sil
+zhui	zh+u u+e e+i i+sil
+zhun	zh+u u+nn nn+sil
+zhuo	zh+u u+o o+sil
+zi	z+ii ii+sil
+zong	z+o o+ng ng+sil
+zou	z+o o+u u+sil
+zu	z+u u+sil
+zuan	z+u u+a a+nn nn+sil
+zuang	z+u u+a a+ng ng+sil
+zui	z+u u+e e+i i+sil
+zun	z+u u+nn nn+sil
+zuo	z+u u+o o+sil

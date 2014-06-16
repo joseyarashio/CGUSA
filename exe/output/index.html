@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        
+        <title>LRC</title>
+        
+        <!-- Our CSS stylesheet file -->
+        <link rel="stylesheet" href="assets/css/styles.css" />
+        
+        <!--[if lt IE 9]>
+          <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+		
+
+    </head>
+    
+    <body>
+	<header>
+            <h1>Generating Lyric Files</h1>
+            </header>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.0/jquery.min.js"></script>
+        <script src="assets/js/jquery.generateFile.js"></script>
+        <script src="assets/js/script.js"></script>
+		
+        <form id="form1" action="./" method="post">
+            <textarea id='text1'rows="4" cols="50" style="font: 14pt Arial"></textarea><br>
+			<input id="rb_lrc" type="radio" name="two" onchange="find_value();" value=".lrc">.lrc format
+			<input id="rb_trs" type="radio" name="two" onchange="find_value();" value=".trs">.trs format<br><br>
+            <a href="#" class="blueButton" id="download">Download</a>
+        </form>
+                
+    <script type="text/javascript"> 
+	var form_name=document.getElementById('form1');
+	var file_type;	
+	
+	function find_value(){
+		if(form_name.two[0].checked==true)
+		{
+			file_type=".lrc";
+			accessFile(file_type);
+		}
+		if(form_name.two[1].checked==true)
+		{
+			file_type=".trs";
+			accessFile(file_type);
+		}
+	}
+	
+	
+	function accessFile(filetype){
+	/* 讀取xml 開始 ------------------------------------------------------------------------------ */  
+    $.ajax({  
+    url:'output.xml',  
+    type: 'Post',  
+    dataType: 'xml',//資料型態可以不設定，且此型態不可是text或html  
+    timeout: 30000,  
+    error: function(xml){  
+        alert('讀取xml錯誤'+xml); //當xml讀取失敗  
+    },  
+    success: function(xml){  
+        $(xml).find("word").each(function(){
+			var name=$(xml).find("name");//找到name
+            var total=$(xml).find("text").length;//name的筆數  
+			var interval=$(xml).find("word > interval");//interval
+            var text2=$(xml).find("word > text");//text
+			//var timberScore=$(xml).find("word > timberScore");// timberScore
+			
+			
+				var temp='';
+				var header='';
+				var footer='';
+				var numoftables = $(xml).find("word > text").length;  
+			if(filetype==".lrc")
+			{
+				for(i=1;i<numoftables-1;i++)  
+				{  
+					var startT=interval.eq(i).text().split(" ",1); //區間
+					var Text3=text2.eq(i).text(); //文本
+				
+					if(Text3 != null&&Text3 != ''){
+					
+						temp+='['+startT+']'+Text3+'\n';
+					}
+				}
+				
+			}
+			else
+			{
+				header+='<?xml version="1.0" encoding="ISO-8859-1"?>\n';
+				header+='<!DOCTYPE Trans SYSTEM "trans-14.dtd">\n';
+				header+='<Trans scribe=" " audio_filename=" ">\n';
+				header+='<Episode>\n';
+				header+='<Section type="report" startTime="0" endTime="';
+				for(i=1;i<numoftables;i++)  
+				{  
+					var startT=interval.eq(i).text().split(" ",1); //起始
+					var p=interval.eq(i).text().split(" ",2)[1]; //
+					var Text3=text2.eq(i).text(); //文本
+					var duration=parseFloat(p)-parseFloat(startT);
+				
+					if(i!=numoftables-1){
+					
+						temp+='<Sync time="'+startT+'"/>'+Text3+'\n';
+					}
+					if(i==numoftables-1)
+					{
+						var endT=interval.eq(i).text().split(" ",1); //end T
+						header+=endT+'">\n';
+						header+='<Turn startTime="0" endTime="'+endT+'">\n';
+					}
+				}
+				footer='</Turn>\n</Section>\n</Episode>\n</Trans>';
+				
+			}
+			$("#text1").val(header+temp+footer);
+			
+    /* 讀取xml結束 ------------------------------------------------------------------------------ */          
+			});  
+		}  
+    });  
+	}
+	
+</script> 
+		
+        
+            
+    </body>
+</html>

@@ -1,0 +1,44 @@
+VERSION=1.0 (by netClass::netPrint())
+N=17	L=25
+I=0	W=!NULL@-1@
+I=1	W=!NULL@-1@
+I=2	W=sil@6@
+I=3	W=sil@6@
+I=4	W=hh_w_ah_t@1@what
+I=5	W=w_ah_t@8@what
+I=6	W=sil@6@
+I=7	W=m_uw_v_iy_z@2@movies
+I=8	W=sil@6@
+I=9	W=hh_ae_v@0@have
+I=10	W=sil@6@
+I=11	W=y_uw@9@you
+I=12	W=sil@6@
+I=13	W=s_iy_n@5@seen
+I=14	W=sil@6@
+I=15	W=r_iy_s_ah_n_l_iy@3@recently
+I=16	W=r_iy_s_ah_n_t_l_iy@4@recently
+J=0	S=0	E=2
+J=1	S=2	E=4
+J=2	S=2	E=5
+J=3	S=3	E=1
+J=4	S=4	E=6
+J=5	S=4	E=7
+J=6	S=5	E=6
+J=7	S=5	E=7
+J=8	S=6	E=7
+J=9	S=7	E=8
+J=10	S=7	E=9
+J=11	S=8	E=9
+J=12	S=9	E=10
+J=13	S=9	E=11
+J=14	S=10	E=11
+J=15	S=11	E=12
+J=16	S=11	E=13
+J=17	S=12	E=13
+J=18	S=13	E=14
+J=19	S=13	E=15
+J=20	S=13	E=16
+J=21	S=14	E=15
+J=22	S=14	E=16
+J=23	S=15	E=3
+J=24	S=16	E=3

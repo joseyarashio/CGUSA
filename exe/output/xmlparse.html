@@ -1,0 +1,57 @@
+<html>  
+<head>  
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.pack.js"></script>  
+<script type="text/javascript">   
+    /* 讀取xml 開始 ------------------------------------------------------------------------------ */  
+    $.ajax({  
+    url:'output.xml',  
+    type: 'Post',  
+    dataType: 'xml',//資料型態可以不設定，且此型態不可是text或html  
+    timeout: 30000,  
+    error: function(xml){  
+        //alert('讀取xml錯誤'+xml); //當xml讀取失敗  
+    },  
+    success: function(xml){  
+        $(xml).find("word").each(function(){
+			var name=$(xml).find("name");//找到name
+            var total=$(xml).find("text").length;//name的筆數  
+			var interval=$(xml).find("word > interval");//interval
+            var text=$(xml).find("word > text");// text
+			var timberScore=$(xml).find("word > timberScore");// timberScore
+			
+			var item=$(xml).find("item");
+			var overallscore=$(xml).find("cm > score");
+			$('.ooxxaa ul').append('<li>文本:'+item.text()+'<br>總分:'+overallscore.text()+'</li><br>'); 
+			
+            var numoftables = $(xml).find("text").length;  
+            for(j=0;j<numoftables-1;j++)  
+            {  
+                    var itemsrc=text.eq(j).text(); //文本
+					var itemstatus=interval.eq(j).text(); //區間
+					var itemscore=timberScore.eq(j).text();//分數
+					var startT=interval.eq(j).text().split(" ",1); //起始
+					var p=interval.eq(j).text().split(" ",2)[1]; //
+					var duration=parseFloat(p)-parseFloat(startT);
+					
+					//if(itemsrc != null&&itemsrc != ''){
+                    //$('.ooxxaa ul').append('<li>'+itemsrc+'<br>間隔:'+itemstatus+'<br>分數:'+itemscore+'</li><br>'); 
+					$('.ooxxaa ul').append('<li>'+itemsrc+'<br>分數:'+itemscore+'<br>'+duration.toFixed(2)+'</li><br>'); 
+					//$('.ooxxaa ul').append('<tr><td>123</td></tr>');
+					//$('.ooxxaa ul').append('<tr><td>'+itemsrc+'</td><td>間隔:'+itemstatus+'</td><td>分數:'+itemscore+'</td></tr>'); 	
+					//}
+					
+				
+			}
+			//$('#myTable').append('<tr><td>my data</td><td>more data</td></tr>');
+			
+    /* 讀取xml結束 ------------------------------------------------------------------------------ */          
+			});  
+		}  
+    });  
+</script>  
+</head>  
+<body>  
+<div class="ooxxaa"><ul></ul> </div> 
+<div id="myTable"><table border='2'></table></div> 
+</body>  
+</html>  

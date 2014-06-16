@@ -1,0 +1,41 @@
+function=assess
+netType=1						% 0:tree net, 1:sausage net (for assessment only)
+language=chinese					% 語言
+macFile=asraData/chinese/tcc300.japan20.linsu.macb	% macro file
+pinyinType=hanyu					% 漢語拼音
+wpaFile=asraData/chinese/chineseBig5.wpa		% wpa: word to phonetic alphabets
+dicFile=asraData/chinese/chinese.dic			% dic: 應該是 pam (phonetic alphabets to model)
+tnmFile=asraData/chinese/chinese.tnm			% File for text normalization mapping
+pyTableFile=asraData/chinese/pinyinTable.txt		% 文字轉拼音列表
+qiYinFile=asraData/chinese/chinese.qiYin
+featureConfigFile=asraData/mfcc.cfg
+txtFile=
+sylFile=
+netFile=
+outputDir=output
+% ====== CM related
+phoneRank2scoreParamFile=asraData/phoneRank2scoreParam.txt
+scoreDiscountParamFile=asraData/chinese/chinese.sdp
+cmParamFile=asraData/chinese/tcc300.japan20.linsu.cmp
+epsFile=asraData/chinese/chinese.eps
+%useAllModelAsCompetingModel=1
+usePaddedHardSp=0			% 在相鄰的 syl 加入不可省略的 sp（適用於人工標音），但不可和樓下選項同時為 1（作法：直接在 m_sylVs 插入 sp. Not used for sausage net.） 
+usePaddedSoftSil=1			% 在相鄰的 syl 加入可省略的 sil（適用於評分），但不可和樓上選項同時為 1（作法：直接在 textClass::sylVs2treeNetVs 插入 sil，但只能用在單一的 linear net）
+% ====== Pitch tracking & volume checking
+ptParamFile=asraData/pitchTracking.prm
+volCheckPrmFile=asraData/volCheck.prm
+% ======= 以下是常變化的項目
+maxCandidateNum=12000
+probTh=3000				% 機率門檻值：若某個路徑機率和第一名相差超過此門檻值，則刪除此路徑
+comparisonMode=1			% 1:整句比對, 2:部份比對, 3:關鍵詞辨識
+getUvScore=1                    
+getPitch=0
+useEpd=0
+useWaveReject=0				% Reject the wave if it doesn't pass waveVolumeCheck()
+useDescCandidateNum=0			% Use a decreasing candidate number
+useSpecSubtraction=0			% Use spectrum subtraction for noise reduction
+addLink4stopAnywhere=1			% Add a link for each node in the net to the sil right before the last !NULL
+addLink4startAnywhere=1			% Add a link from the sil right after the first !NULL to each node in the net
+addLink4forwardJump=0			% Add a link for every two nodes for forward jumps
+addLink4skippableTrailingSil=0		% Add links for skippable trailing silence
+addLink4skippableLeadingSil=0		% Add links for skippable leading silence
