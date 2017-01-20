@@ -1,0 +1,59 @@
+ab -r -n 1000000 -c 1000
+
+
+Server Software:        nginx/1.4.6
+Server Hostname:        jleedev.futuredial.com.tw
+Server Port:            80
+
+Document Path:          /uwsgi/
+Document Length:        8 bytes
+
+Concurrency Level:      1000
+Time taken for tests:   22.510 seconds
+Complete requests:      100000
+Failed requests:        5946
+   (Connect: 0, Receive: 3026, Length: 2920, Exceptions: 0)
+Non-2xx responses:      7
+Total transferred:      16628805 bytes
+HTML transferred:       774719 bytes
+Requests per second:    4442.48 [#/sec] (mean)
+Time per request:       225.100 [ms] (mean)
+Time per request:       0.225 [ms] (mean, across all concurrent requests)
+Transfer rate:          721.42 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0   14  31.5      6     356
+Processing:     1  197 461.2     30    7768
+Waiting:        0  194 461.2     28    7767
+Total:          2  212 462.4     40    7780
+
+=====================================================================================================
+
+Server Software:        gunicorn/19.3.0
+Server Hostname:        jleedev.futuredial.com.tw
+Server Port:            80
+
+Document Path:          /ws/
+Document Length:        8 bytes
+
+Concurrency Level:      1000
+Time taken for tests:   25.632 seconds
+Complete requests:      100000
+Failed requests:        12896
+   (Connect: 0, Receive: 6290, Length: 6606, Exceptions: 0)
+Non-2xx responses:      90
+Total transferred:      15528318 bytes
+HTML transferred:       760362 bytes
+Requests per second:    3901.31 [#/sec] (mean)
+Time per request:       256.324 [ms] (mean)
+Time per request:       0.256 [ms] (mean, across all concurrent requests)
+Transfer rate:          591.61 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0   13  29.6      3     283
+Processing:     0  226 479.7     96   15451
+Waiting:        0  224 480.0     94   15449
+Total:          1  240 479.9    110   15458
+
